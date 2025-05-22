@@ -80,5 +80,10 @@ public class arrayListDemo {
      num.add(40);
      System.out.println(num+""+ num2);
      System.out.println(num.remove(0));
+
+     //removeall means remove one subarray in main array
+     System.out.println(num2);
+     System.out.println(num2.removeAll(num));
+     System.out.println(num2);
     }
 }
