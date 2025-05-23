@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.ListIterator;
 
@@ -47,25 +49,25 @@ public class arrayListDemo {
    System.out.println("get data "+data);
 
    //indexof -> found the mentioned element index
+   System.out.println(num2.isEmpty());
    System.out.println(num2.indexOf(40));
 
 
    //isempty -> check the array list contains data or not
-   System.out.println(num2.isEmpty());
    System.out.println(num.isEmpty());
-
+   
    /*iterator-> iterate each element when compared to forech it can remove element while iterate
    it has full control of an array*/
    //get an iterator of array
    Iterator<Integer> numbers = num2.iterator();
    //hasNext if there move forward
    //next move the number to next
-     while (numbers.hasNext()) {
-        Integer nextNum = numbers.next();
-        System.out.println("iterator  :  "+nextNum);;
-     }
-
-
+   while (numbers.hasNext()) {
+       Integer nextNum = numbers.next();
+       System.out.println("iterator  :  "+nextNum);;
+    }
+    
+    
      //ListIterator -> list the all element of an array withour using next declaration
 
      ListIterator<Integer> listNum = num2.listIterator();
@@ -85,5 +87,25 @@ public class arrayListDemo {
      System.out.println(num2);
      System.out.println(num2.removeAll(num));
      System.out.println(num2);
+
+     num2.add(11);
+     num2.add(23);
+     num2.add(35);
+
+     //removeif ->match the certain condition remove the that 
+
+     num2.removeIf(n->(n%2==0));
+     System.out.println(num2);
+
+     num2.add(10);
+     num2.add(20);
+     num2.add(30);
+
+     System.out.println(num2);
+    
+     // Sort the list
+     Collections.sort(num2);
+
+     System.out.println("After sort the collections"+num2);
     }
 }
