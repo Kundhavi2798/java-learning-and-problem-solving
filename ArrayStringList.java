@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Spliterator;
 
 // Extend the class to arraylist because removeRange() is a protected method
-public class arrayStringList extends ArrayList<String> {
+public class ArrayStringList extends ArrayList<String> {
 
 public static void main(String[] args) {
 

@@ -1,5 +1,5 @@
 import java.util.*;
-public class arrayfredNum {
+public class ArrayFredNum {
 
     public static void main(String[] args) {
         int[] num = {1,3,5,3,3,3,4,4,4,6,6,5};

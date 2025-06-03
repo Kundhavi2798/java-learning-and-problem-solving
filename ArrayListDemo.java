@@ -3,7 +3,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.ListIterator;
 
-public class arrayListDemo {
+public class ArrayListDemo {
 
     public static void main(String[] args) {
         System.out.println("Wellcome to java ArrayList");

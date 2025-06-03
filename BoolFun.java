@@ -1,4 +1,4 @@
-public class boolfun {
+public class BoolFun {
 
     public static void main(String[] args) {
         boolean num1 = true;

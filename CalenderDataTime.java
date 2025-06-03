@@ -1,10 +1,11 @@
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Locale;
+import java.util.Map;
 import java.util.Set;
 import java.util.Calendar;
 
-public class calenderDataTime{
+public class CalenderDataTime{
 
     public static void main(String[] args) {
         Calendar calen = Calendar.getInstance();
@@ -95,6 +96,30 @@ public class calenderDataTime{
         // Get the display name for the month in the current locale.
         String displayName = cal.getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
         System.out.println(displayName);
+
+        //Get displaynames based on the input we provide
+        System.out.println(calen.getTime());
+
+        Map<String, Integer> mapdata = calen.getDisplayNames(Calendar.DAY_OF_WEEK, Calendar.SHORT, Locale.US) ;
+        for (Map.Entry<String, Integer> entry : mapdata.entrySet()){
+           System.out.println(entry.getKey()+ ":" + entry.getValue());
+        }
+        //getmaxi and getmin value of the exact value
+        System.out.println(calen.getMaximum(Calendar.DAY_OF_WEEK));
+        System.out.println(calen.getMinimum(Calendar.DAY_OF_WEEK));
+
+
+        //Print time in milliseconds
+        System.out.println(calen.getTimeInMillis());
+
+        System.out.println(calen.getTimeZone().getDisplayName());
+
+        System.out.println("Weeks in week year: "  + calen.getWeeksInWeekYear());
+
+        System.out.println("Weeks in week year: "  + calen.getWeekYear());
+        int hasc = calen.hashCode();
+        System.out.println(hasc);
+
         
 
     }
